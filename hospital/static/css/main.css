@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+*{
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    min-width: 400px;
+}
+
+header img{
+    height: 70px;
+    max-width: 1000px;
+}
+
+header span{
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+    width: 100%;
+    background:rgba(64, 174, 247, 0.664);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+nav ul{
+    list-style-type: none;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 16px;
+    transition: all 0.5s ease;
+}
+nav ul li:hover{
+    background:rgb(86, 161, 211);
+}
+
+.doctor-esc{
+    margin: 0 auto 0 auto;
+    display: block;
+}
+
+.btn{
+    border: 0.3px solid rgb(255, 255, 255);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 10px 16px 10px 16px;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn b{
+    color:rgb(83, 177, 240);
+}
+
+.btn:hover{
+    background-color:  rgb(172, 223, 255);
+
+}
+
+nav ul li a {
+    color: rgba(255, 255, 255, 0.801);
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+}
+.toggle{
+    width: 100%;
+    padding: 10px 20px;
+    background: rgba(64, 174, 247, 0.664);
+    text-align: left;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    display: none;
+}
+.toggle button{
+    color: white;
+}
+.toggle img{
+    width: 90px;
+    margin-left: 10px;
+}
+
+.logo-desp{
+    display: none;
+}
+main{
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.background{
+    background-image: url('../img/');
+    background-repeat: no-repeat;
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.text{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:80px;
+    text-align: center;
+}
+
+.text img{
+    width: 35%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.salud-pic{
+    min-width: 200px;
+}
+
+.div_1{
+    width: 60%;
+    display: inline-block;
+    text-align: left;
+    font-size: 18px;
+}
+.div_1 p{
+    text-align: justify;
+}
+
+.div_2{
+    background-image: url('../img/clinica-body.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.95;
+    height: 450px;
+}
+.div_2 div{
+    float: right;
+    color: rgb(255, 255, 255);
+    max-width: 600px;
+    padding-right: 50px;
+    text-align: left;
+    margin-top: 120px;
+    font-size: 18px;
+}
+
+.div_3{
+    width: 60%;
+    display: inline-block;
+    text-align: left;
+    font-size: 18px;
+    padding: 50px 0 50px 0;
+}
+
+.div_3 p{
+    text-align: justify;
+}
+
+footer{
+    width: 100%;
+    border-top:1px rgba(0, 0, 0, 0.137) solid;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(0, 80, 133);
+}
+
+.img_foot{
+    width: 150px;
+    opacity: 0.6;
+}
+
+footer img{
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    opacity: 0.6;
+}
+
+.active{
+    display: block;
+}
+
+.arriendo{
+    text-align: left;
+    padding: 16px;
+    float: left;
+    border-top: 35px solid rgb(255, 70, 17);
+    width: 40%;
+}
+
+.arriendo h4{
+    text-align: center;
+    margin-top: -45px;
+    color: white;
+}
+
+.arri-cont {
+    text-align: center;
+    display: none;
+}
+
+.en-curso{
+    text-align: center;
+    display: none;
+}
+
+.block{
+    display: block;
+}
+
+.arri-cont button{
+    background-color: rgb(255,70,17);
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid  rgb(218, 62, 19);
+}
+
+.en-curso button{
+    background-color: rgb(255,70,17);
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid  rgb(218, 62, 19);
+}
+
+.en-curso button:hover{
+    background-color:  rgb(153, 44, 14);
+}
+
+
+.arri-cont button:hover{
+    background-color:  rgb(153, 44, 14);
+}
+
+.map-cont{
+    width: 100%;
+    text-align: right;
+}
+.map-cont button{
+    width: 40px;
+    position: absolute;
+    z-index: 98;
+    margin: 150px 400px;
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+}
+
+.quienes{
+    text-align: center;
+    width: 80%;
+    margin: 80px auto 50px auto;
+    max-width: 1000px;
+}
+
+.quienes p{
+    text-align: justify;
+}
+
+.somos-mo{
+    background-image: url('../img/somos-mo.jpg');
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+}
+
+.somos-cont{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(126, 24, 10, 0.521);
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding-top:200px; 
+}
+
+.somos-cont h1{
+    font-size: 60px;
+}
+
+.somos-2{
+    width: 100%;
+    height: 600px;
+    background-image: url('../img/somos-2.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.btn_salir{
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+@media screen and (max-width: 1000px){
+    .background{
+        height: 400px;
+    }
+}
+
+.none{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    header{
+        display: none;
+    }
+
+    .btn{
+        border: 1px solid rgb(83, 177, 240);
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        padding: 12px 16px 12px 16px;
+        background-color: rgba(0, 153, 255, 0.664);
+        color: white;
+    }
+
+    .btn b{
+        color:rgb(255, 255, 255);
+    }
+    .somos-2{
+        height: 400px;
+    }
+
+    .somos-mo{
+        height: 300px;
+    }
+
+    .somos-cont{
+        padding-top:90px; 
+    }
+
+    .somos-cont h1{
+        font-size: 35px;
+    }
+
+    .div_2 div{
+        color: white;
+    }
+
+    .arriendo{
+        width: 100%;
+    }
+
+    .map-cont button{
+        margin: 300px 400px;
+    }
+
+
+    .map-cont{
+        text-align:center;
+    }
+    #map{
+        width: 90%;
+    }
+    .background{
+        background-position: top;
+        background-size: 100%;
+        height: 350px;
+    }
+    
+    .div_2 div{
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav{
+        background: rgba(98, 186, 245, 0.8);
+        position: fixed;
+        top: 0;
+    }
+    .toggle{
+        display: block;
+    }
+    nav ul{
+        width: 100%;
+        display: none;
+    }
+    nav ul li{
+        display: block;
+        text-align: center;
+        border-bottom: 1px rgba(0, 82, 136, 0.315) solid;
+        box-sizing: border-box;
+    }
+    nav ul li a {
+        color: white;
+    }
+    
+    .menu{
+        border: none;
+        background: none;
+        width: 40px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .logo-desp{
+        display: block;
+        font-family: 'Pacifico', cursive;
+        color: white;
+        margin: 0;
+        font-size: 20px;
+        box-sizing: border-box;
+        padding: 30px;
+    }
+    .logo-desp a{
+        text-decoration: none;
+        color: white;
+    }
+}

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Centro Médico | Dos Álamos</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% block extrastatic %}
+    {% endblock %}
+    <!-- end links -->
+    
+</head>
+<body>
+    <header>
+    </header>
+    <nav>
+        <div class="toggle">
+            <button class="menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        </div> 
+        <ul class="menu_non">
+            <li><a href="{% url 'index' %}"><b>Inicio</b></a></li>
+            <li><a href="{% url 'conocenos' %}"><b>Agendar Atención</b></a></li>
+        </ul>
+    </nav>       
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+
+    </main>
+    <footer>
+        <h4><span>Centro Médico Dos Álamos</span></h4>
+        <h4><span>&copy; 2018 </span></h4>
+        <h4> <span>Todos los derechos reservados | medicent.alamos@dosalamos.cl </span></h4>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

@@ -1,6 +1,44 @@
-<html>
-<body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-</body>
-</html>
+{% extends 'hospital/base.html'%}
+{% load static %}
+
+{% block content %}
+    <main>
+        <div class="text">
+            <div class="div_1">
+                <h1>Centro Médico Dos Álamos</h1>
+                <p>
+                    Confía en tu salud con nosotros. 
+                    ¡Nuestras cómodas instalaciones están a tu disposición para brindarte la mejor atención en salud!
+                </p>
+            </div>
+            <img class="salud-pic" src="{% static 'img/salud.png' %}" alt="app_movil">
+        </div>
+        <div class="div_2">
+            
+        </div>
+        <div class="div_3">
+
+            <div>
+                <img class="doctor-esc" src="{% static 'img/icono-estetoscopio.png' %}" alt="icono-estetoscopio">
+           
+                <p>
+                    <b>
+                        Disponemos de especialistas en las diferentes áreas de la salud, 
+                        quienes trabajan con tecnología de punta para mantener su bienestar.
+                    </b>
+                </p>
+                <img class="doctor-esc" src="{% static 'img/icono-microscopio.png' %}" alt="icono-microscopio">
+        
+                <p>
+                    <b>
+                        Deje su salud en nuestras manos.
+                        Si desea tratar sus males en un centro médico que le garantice buenos servicios, 
+                        solicite una cita con nosotros. Estaremos encantados de satisfacer todos sus 
+                        requerimientos.
+                    </b>
+                </p>
+            </div>
+           
+        </div>
+    </main>
+{% endblock %}
