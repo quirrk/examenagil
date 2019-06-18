@@ -4,5 +4,5 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'hospital/index.html', {})
 
-def conocenos(request):
-    return render(request, 'hospital/conocenos.html', {})
+def agendar(request):
+    return render(request, 'hospital/agendar.html', {})
