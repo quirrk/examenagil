@@ -28,9 +28,16 @@
             <input type="checkbox" id="menu-bar">
             <label class="icon-menu" for="menu-bar"></label>
             <nav class="menu">
-                    <a href="#">INICIO</a>
-                    <a href="#">PACIENTE</a>
+                <a href="#">INICIO</a>
+                {% if user.is_authenticated and user.is_staff %}
                     <a href="#">MEDICO</a>
+                    <a href="{% url 'logout' %}">CERRAR SESION</a>
+                {% elif user.is_authenticated %}
+                    <a href="#">PACIENTE</a>
+                    <a href="{% url 'logout' %}">CERRAR SESION</a>
+                {% else %}
+                    <a href="{% url 'login' %}">INICIAR SESION</a>
+                {% endif %}
             </nav>
         </div>
     </header>       

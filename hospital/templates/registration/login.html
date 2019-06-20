@@ -1,0 +1,27 @@
+{% extends 'hospital/base.html'%}
+{% load static %}
+
+{% block content %}
+<section id="bannerlog">
+    <img src="images/bannerlogin.jpg">
+    <div class="contenedor">
+        <h1>
+            Ingresa a tu Cuenta <br>
+            y haz tu solicitud!				
+        </h1>
+        
+    </div>
+</section>
+
+<section id="informacion">
+    <h3>INGRESA CON TU CUENTA</h3>
+    <div class="contenedor">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</section>
+{% endblock %}
