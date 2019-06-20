@@ -2,43 +2,73 @@
 {% load static %}
 
 {% block content %}
-    <main>
-        <div class="text">
-            <div class="div_1">
-                <h1>Centro Médico Dos Álamos</h1>
-                <p>
-                    Confía en tu salud con nosotros. 
-                    ¡Nuestras cómodas instalaciones están a tu disposición para brindarte la mejor atención en salud!
-                </p>
-            </div>
-            <img class="salud-pic" src="{% static 'img/salud.png' %}" alt="app_movil">
-        </div>
-        <div class="div_2">
+<section id="banner">
+        <img src="{% static 'img/banner.jpg' %} ">
+        <div class="contenedor">
+            <h1>
+                Ven por tu <br>
+                Examenes!				
+            </h1>
             
         </div>
-        <div class="div_3">
-
-            <div>
-                <img class="doctor-esc" src="{% static 'img/icono-estetoscopio.png' %}" alt="icono-estetoscopio">
-           
-                <p>
-                    <b>
-                        Disponemos de especialistas en las diferentes áreas de la salud, 
-                        quienes trabajan con tecnología de punta para mantener su bienestar.
-                    </b>
-                </p>
-                <img class="doctor-esc" src="{% static 'img/icono-microscopio.png' %}" alt="icono-microscopio">
-        
-                <p>
-                    <b>
-                        Deje su salud en nuestras manos.
-                        Si desea tratar sus males en un centro médico que le garantice buenos servicios, 
-                        solicite una cita con nosotros. Estaremos encantados de satisfacer todos sus 
-                        requerimientos.
-                    </b>
-                </p>
-            </div>
-           
+    </section>
+    
+    <section id="introduccion">
+        <h2>NUESTROS SERVICIOS</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+    
+    <section id="nuestrosexamenes">
+        <h3>ALGUNOS EXAMENES QUE REALIZAMOS</h3>
+        <div class="contenedor">
+            <article>
+                <img src="{% static 'img/examenindex1.jpg' %}" alt="">
+                <h4>CORAZON</h4>
+            </article>
+            
+            <article>
+                <img src="{% static 'img/examenindex2.jpg' %}" alt="">
+                <h4>PULMONAR</h4>
+            </article>
+            
+            <article>
+                <img src="{% static 'img/examenindex3.jpg' %}" alt="">
+                <h4>A LA VISTA</h4>
+            </article>
+            
+            <article>
+                <img src="{% static 'img/examenindex4.jpg' %}" alt="">
+                <h4>LUMBAR</h4>
+            </article>
+            
         </div>
-    </main>
+    </section>
+    
+    <section id="informacion">
+        <h3>¿POR QUE OCUPAR NUESTRA WEB?</h3>
+        <div class="contenedor">
+            <div class="info-calidad">
+                <div class="estrellas">
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                </div>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+            </div>
+            <div class="info-calidad">
+                <div class="estrellas">
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star-half"></span>
+                </div>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                </p>
+            
+            </div>
+        </div>
+    </section>
 {% endblock %}

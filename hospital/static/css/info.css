@@ -1,0 +1,63 @@
+/* SECTION INFORMACION*/
+#informacion
+{
+    background: #fff;
+    color: #3F3F3F;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* TITULO SECTION INFORMACION*/
+#informacion h3
+{
+    padding: 55px;
+    font-size: 30px;
+}
+
+/* CONTENEDOR QUE ESTA DENTRO DE INFORMACION*/
+#informacion .contenedor
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*CONTENEDOR DEL SECTION INFORMACION*/
+.info-calidad
+{
+    margin: 30px;
+    margin-bottom: 100px;
+}
+
+/*PARRAFOS QUE ESTAN DENTRO DEL CONTENEDOR DEL SECTION INFORMACION*/
+.info-calidad p
+{
+    text-align: justify;
+}
+
+/*ESTRELLAS CONTENEDOR DEL SECTION INFORMACION*/
+.info-calidad .estrellas
+{
+    margin: 15px;
+}
+
+
+
+/*RESPONSIVE-RESPONSIVE-RESPONSIVE*/
+
+/*768px*/
+@media (min-width:768px){
+    
+    /* ADAPTAMOS EL CONTENEDOR DE INFO CALIDAD*/
+    .info-calidad
+    {
+        width: 40%;
+    }
+
+    /* ADAPTAMOS EL CONTENEDOR DE INFO CALIDAD*/
+    #informacion .contenedor
+    {
+        
+        justify-content: space-between;
+    }
+}

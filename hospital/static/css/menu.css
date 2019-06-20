@@ -1,0 +1,81 @@
+/* ICONO DEL MENU*/
+#menu-bar
+{
+    display: none;
+}
+
+/* EL QUE CONTIENE EL ICONO DEL MENU*/
+header label
+{
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+/*MENU*/
+.menu
+{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,74,180,0.9);
+    /* LE DAMOS TIEMPO Y ORIENTACION AL MENU CUANDO SE DESPLIEGA EN MOBILE*/
+    transition: all 0.5s;
+    transform: translateX(-100%);
+    
+}
+
+/*ENLACES DEL MENU */
+.menu a
+{
+    display: block;
+    color: #fff;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    
+}
+
+/*ENLACES DEL MENU CUANDO SE PASA EL PUNTERO DEL MOUSE POR ENCIMA DE CADA ENLACE*/
+.menu a:hover
+{
+    background: rgba(255,255,255,0.3);
+}
+
+/* CUANDO HAGO CHECKED EN EL CHECKBOX DEL MENU "ICONO MENU BAR"*/
+#menu-bar:checked ~ .menu 
+{
+    transform: translateX(0%);
+}
+
+/*RESPONSIVE-RESPONSIVE-RESPONSIVE*/
+
+@media (min-width:1024px){
+    
+    /* ADAPTAMOS EL MENU A TAMAÑO ESCRITORIO*/
+    .menu
+    {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+    }
+    
+    /*ELIMINAMOS EL BORDER DEL MENU*/
+    .menu a
+    {
+        border: none;
+    }
+    
+    /* ELIMINAMOS EL BOTON MOVIL*/
+    header label
+    {
+        display: none;
+    }
+}

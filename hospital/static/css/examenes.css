@@ -1,0 +1,43 @@
+/* TITULO DE LA SECTION NUESTROS EXAMENES EN INDEX*/
+#nuestrosexamenes h3,h4
+{
+    text-align: center;
+    padding: 40px;
+}
+
+/* TITULO DE LA SECTION NUESTROS EXAMENES EN INDEX*/
+#nuestrosexamenes h3
+{
+    font-size: 30px;
+}
+
+/*SECTION NUESTROS EXAMENES EN INDEX*/
+#nuestrosexamenes 
+{
+    background: #3364AB;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+/* CONTENEDOR DEL SECTION NUESTROS EXAMENES EN INDEX*/
+#nuestrosexamenes .contenedor
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+/* ARTICLES QUE ESTAN DENTRO DE SECTION NUESTROS EXAMENES EN INDEX*/
+#nuestrosexamenes article
+{
+    margin: 15px;
+}
+
+/* IMAGENES QUE ESTAN DENTRO DEL SECTION NUESTROS EXAMENES EN INDEX*/
+#nuestrosexamenes img
+{
+    width: 100%;
+    max-width: 250px;
+    border: 5px solid #fff;
+    border-radius: 500px;
+}
