@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-
+    <script src="{% static 'js/examenes.js' %}"></script>
+    <script src="{% static 'js/nomina.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/fontello.css' %}">
         <link rel="stylesheet" href="{% static 'css/menu.css' %}">
@@ -27,12 +28,12 @@
             <input type="checkbox" id="menu-bar">
             <label class="icon-menu" for="menu-bar"></label>
             <nav class="menu">
-                <a href="#"> <i class="fa fa-home" aria-hidden="true"></i> INICIO</a>
+                <a href="{% url 'index' %}"> <i class="fa fa-home" aria-hidden="true"></i> INICIO</a>
                 {% if user.is_authenticated and user.is_staff %}
-                    <a href="#"> <i class="fa fa-user-md" aria-hidden="true"></i> MEDICO</a>
+                    <a href="{% url 'medico' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> MEDICO</a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% elif user.is_authenticated %}
-                    <a href="#"> <i class="fa fa-user" aria-hidden="true"></i> PACIENTE</a>
+                    <a href="{% url 'paciente' %}"> <i class="fa fa-user" aria-hidden="true"></i> PACIENTE</a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% else %}
                     <a href="{% url 'login' %}"> <i class="fa fa-sign-in" aria-hidden="true"></i> INICIAR SESION </a>
