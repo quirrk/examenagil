@@ -5,7 +5,7 @@
 
     var loadData = function(){
         var xhttp = new XMLHttpRequest();
-        var url = "https://nicolini.pythonanywhere.com/listaexamenes/";
+        var url = "https://servet.pythonanywhere.com/listaexamenes/";
 
         xhttp.onreadystatechange = function(){
             if( this.readyState == 4 && this.status == 200){

@@ -3,20 +3,19 @@
 <html lang="en">
 <head>
     
-    <title>Centro Médico | IServet</title>
+    <title>Centro Médico | IServet 
+    </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <script src="{% static 'js/examenes.js' %}"></script>
-    <script src="{% static 'js/nomina.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/datosws.css' %}">
     <link rel="stylesheet" href="{% static 'css/fontello.css' %}">
-        <link rel="stylesheet" href="{% static 'css/menu.css' %}">
-        <link rel="stylesheet" href="{% static 'css/banner.css' %}">
-        <link rel="stylesheet" href="{% static 'css/examenes.css' %}">
-        <link rel="stylesheet" href="{% static 'css/info.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/banner.css' %}">
+    <link rel="stylesheet" href="{% static 'css/examenes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/info.css' %}">
     {% block extrastatic %}
     {% endblock %}
     <!-- end links -->
@@ -31,13 +30,17 @@
             <nav class="menu">
                 <a href="{% url 'index' %}"> <i class="fa fa-home" aria-hidden="true"></i> INICIO</a>
                 {% if user.is_authenticated and user.is_staff %}
-                    <a href="{% url 'medico' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> MEDICO</a>
+                    <a href="{% url 'paciente' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> RESULTADOS </a>
+                    <a href="{% url 'medico' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> TIPOS DE EXAMEN </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% elif user.is_authenticated %}
-                    <a href="{% url 'paciente' %}"> <i class="fa fa-user" aria-hidden="true"></i> PACIENTE</a>
+                    <a href="{% url 'agendar' %}"> <i class="fa fa-user" aria-hidden="true"></i> SOLICITUD </a>
+                    <a href="{% url 'paciente' %}"> <i class="fa fa-user" aria-hidden="true"></i> RESULTADOS </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% else %}
                     <a href="{% url 'login' %}"> <i class="fa fa-sign-in" aria-hidden="true"></i> INICIAR SESION </a>
+                    <a href="{% url 'signup' %}"> <i class="fa fa-user-circle-o" aria-hidden="true"></i> REGISTRARSE </a>
+
                 {% endif %}
             </nav>
         </div>

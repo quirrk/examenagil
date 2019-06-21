@@ -1,12 +1,14 @@
 {% extends 'hospital/base.html'%}
 {% load static %}
+
+{% block extrastatic %}
+<script src="{% static 'js/examenes.js' %}"></script>
+<script src="{% static 'js/nomina.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 
-<main class="main">
-    <div id="examenSelected" class="examenSelected">
-       
-    </div>
-</br>
+<main class="main"></main>
     <div id="nominaSelected" class="nominaSelected">
        
     </div>
