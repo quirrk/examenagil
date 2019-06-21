@@ -1,6 +1,6 @@
-
 var rut_pac = document.getElementById('rut_pac').innerHTML;
 console.log(rut_pac)
+
 
 function serologico(){
     var xmlhttp = new XMLHttpRequest();
@@ -51,4 +51,5 @@ function lumbar(){
     );
     alert("Exámen agendado correctamente, revisa tu agenda");
 }
+
 

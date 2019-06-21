@@ -12,3 +12,6 @@ def paciente(request):
 
 def medico(request):
     return render(request, 'hospital/medico.html', {})
+
+def examenes_doc(request):
+    return render(request, 'hospital/examenes_doc.html', {})
