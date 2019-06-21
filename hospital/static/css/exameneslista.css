@@ -27,7 +27,7 @@
     color: #fff;
     padding: 10px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 22px;
     
 }
 /* BOTON COMPRAR*/
@@ -47,6 +47,7 @@
     background: #3364AB;
     color: #fff;
     font-family: 'Poppins', sans-serif;
+    
 }
 /* CONTENEDOR DEL SECTION NUESTROS EXAMENES*/
 #nuestrosexameneslistado .contenedor

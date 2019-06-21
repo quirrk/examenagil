@@ -1,10 +1,47 @@
 {% extends 'hospital/base.html'%}
 {% load static %}
 
+{% block extrastatic %}
+<link rel="stylesheet" href="{% static 'css/exameneslista.css' %}" type="text/css">
+{% endblock %}
+
+
 {% block content %}
-<section id="examenproduct">
-    <img src="images/bannerexamenes.jpg">
+
+<section id="nuestrosexameneslistado">
+    <h2>NUESTROS EXAMENES</h2>
     <div class="contenedor">
+        <article>
+            <h4>SEROLÓGICO</h4>
+            <h3>$280.490</h3>
+            <a href="#" class="botoncomprar" id="solicitud_sero" onclick="serologico();location.href = '/'" >SOLICITAR</a>
+        </article>
+        
+        <article>
+            <h4>PUNCIÓN DE TIROIDES</h4>
+            <h3>$150.490</h3>
+            <a href="#" class="botoncomprar" id="solicitud_tiroide" onclick="tiroides()" >SOLICITAR</a>
+        </article>
+        
+        <article>
+            <h4>INMUNOLÓGICO</h4>
+            <h3>$25.590</h3>
+            <a href="#" class="botoncomprar" id="solicitud_inmuno" onclick="inmuno()">SOLICITAR</a>
+        </article>
+        
+        <article>
+            <h4>HORMONAL</h4>
+            <h3>$562.490</h3>
+            <a href="#" class="botoncomprar" id="solicitud_hormonal" onclick="hormonal()">SOLICITAR</a>
+        </article>
+
+        <article>
+            <h4>PUNCIÓN LUMBAR</h4>
+            <h3>$562.490</h3>
+            <a href="#" class="botoncomprar" id="solicitud_lumbar" onclick="lumbar()">SOLICITAR</a>
+        </article>
+        
+        
         
     </div>
 </section>

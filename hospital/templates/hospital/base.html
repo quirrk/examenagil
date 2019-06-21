@@ -34,9 +34,10 @@
                     <a href="{% url 'medico' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> TIPOS DE EXAMEN </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% elif user.is_authenticated %}
-                    <a href="https://servet.pythonanywhere.com/examenes/add/"> <i class="fa fa-user" aria-hidden="true"></i> SOLICITUD </a>
-                    <a href="{% url 'paciente' %}"> <i class="fa fa-user" aria-hidden="true"></i> RESULTADOS </a>
+                    <a href="{% url 'agendar' %}"> <i class="fa fa-user" aria-hidden="true"></i> SOLICITUD </a>
+                    <a href="{% url 'paciente' %}"> <i class="fa fa-user" aria-hidden="true"></i> MIS EXÁMENES </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
+                    <p id="rut_pac">{{ user.username}}</p>         
                 {% else %}
                     <a href="{% url 'login' %}"> <i class="fa fa-sign-in" aria-hidden="true"></i> INICIAR SESION </a>
                     <a href="{% url 'signup' %}"> <i class="fa fa-user-circle-o" aria-hidden="true"></i> REGISTRARSE </a>
@@ -61,6 +62,7 @@
             </div>
         </div>
     </footer>
-
+    
+    <script src="{% static 'js/post.js' %}"></script>
 </body>
 </html>
