@@ -34,7 +34,7 @@
                     <a href="{% url 'medico' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> TIPOS DE EXAMEN </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% elif user.is_authenticated %}
-                    <a href="{% url 'agendar' %}"> <i class="fa fa-user" aria-hidden="true"></i> SOLICITUD </a>
+                    <a href="https://servet.pythonanywhere.com/examenes/add/"> <i class="fa fa-user" aria-hidden="true"></i> SOLICITUD </a>
                     <a href="{% url 'paciente' %}"> <i class="fa fa-user" aria-hidden="true"></i> RESULTADOS </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% else %}
