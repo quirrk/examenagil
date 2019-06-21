@@ -1,0 +1,91 @@
+#examenSelected{
+    box-sizing: border-box;
+    widows: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 0 15px 15px 15px;
+}
+
+#nominaSelected{
+    box-sizing: border-box;
+    widows: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 0 15px 15px 15px;
+}
+
+.miExamen{
+    display: block;
+    font-size:16px;
+    text-align: left;
+    margin: 60px 10px 0 10px;
+    width: 30%;
+    border:1px solid  rgb(228, 228, 228);
+    border-top: 40px solid rgb(59, 179, 194);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-sizing: border-box;
+    padding: 0 10px 15px 10px;
+}
+
+.miNomina{
+    font-size:16px;
+    text-align: center;
+    margin: 60px 10px 0 10px;
+    width: 30%;
+    border:1px solid  rgb(228, 228, 228);
+    border-top: 40px solid rgb(59, 179, 194);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-sizing: border-box;
+    padding: 0 10px 15px 10px;
+}
+
+.miExamen p{
+    max-width: 100%;
+    text-align: left;
+    margin: 0 12px 0 12px;
+}
+
+.miNomina p{
+    max-width: 100%;
+    text-align: left;
+    margin: 0 12px 0 12px;
+}
+
+/* ------------------------------------- */
+
+@media screen and (max-width: 840px){
+    .miExamen{
+        width: 45%;
+    }
+    .miNomina{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .miExamen{
+        width: 100%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .miNomina{
+        width: 100%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+}
