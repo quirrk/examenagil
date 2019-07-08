@@ -1,13 +1,11 @@
 {% extends 'hospital/base.html'%}
 {% load static %}
-
 {% block content %}
 
 <section id="informacion">
-    <h3>INGRESA CON TU CUENTA</h3>
-    <div class="contenedor">
-        <h2>Login</h2>
+    <div class="contenedor" style="display: block; margin: 70px auto 0 auto;">
         <form method="post">
+            <h2>Login</h2>
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Login</button>

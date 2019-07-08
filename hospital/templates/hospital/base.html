@@ -2,20 +2,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        {% if user.is_authenticated and user.is_staff and user.is_superuser %}
+            <title> BODEGA </title>
+        {% elif user.is_authenticated and user.is_staff %}
+            <title> GESTION TECNICOS </title>
+        {% elif user.is_authenticated %}
+            <title> VENTAS Y SOLICITUDES </title>                  
+        {% else %}
+            <title> BIENVENIDO </title>             
+        {% endif %}
     
-    <title>Centro Médico | IServet 
-    </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/datosws.css' %}">
     <link rel="stylesheet" href="{% static 'css/fontello.css' %}">
     <link rel="stylesheet" href="{% static 'css/menu.css' %}">
-    <link rel="stylesheet" href="{% static 'css/banner.css' %}">
-    <link rel="stylesheet" href="{% static 'css/examenes.css' %}">
-    <link rel="stylesheet" href="{% static 'css/info.css' %}">
+    <link rel="stylesheet" href="{% static 'css/seguimiento.css' %}">
     {% block extrastatic %}
     {% endblock %}
     <!-- end links -->
@@ -24,21 +28,29 @@
 <body>
     <header>
         <div class="contenedor">
-            <h1 class="#">IServet</h1>
             <input type="checkbox" id="menu-bar">
             <label class="icon-menu" for="menu-bar"></label>
             <nav class="menu">
-                <a href="{% url 'index' %}"> <i class="fa fa-home" aria-hidden="true"></i> INICIO</a>
-                {% if user.is_authenticated and user.is_staff %}
-                    <a href="{% url 'examenes_doc' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> RESULTADOS </a>
-                    <a href="{% url 'medico' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> TIPOS DE EXAMEN </a>
+
+                {% if user.is_authenticated and user.is_staff and user.is_superuser %}
+                    <a href="{% url 'inventario' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> CONSULTAR STOCK </a>
+                    <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
+                {% elif user.is_authenticated and user.is_staff %}
+                    <a href="{% url 'inventario' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> CONSULTAR STOCK </a>
+                    <a href="{% url 'mis_soli' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> MIS SOLICITUDES </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% elif user.is_authenticated %}
-                    <a href="{% url 'agendar' %}"> <i class="fa fa-user" aria-hidden="true"></i> SOLICITUD </a>
-                    <a href="{% url 'paciente' %}"> <i class="fa fa-user" aria-hidden="true"></i> MIS EXÁMENES </a>
+                    <a>Usuario:</a>
+                    <a id="rut_pac" >{{user.username}}</a>
+                    <a id="" >Saldo bancario:</a>
+                    <a id="saldo_cli" ></a>
+                    <a href="{% url 'comprar' %}"> COMPRAR </a>
+                    <a href="{% url 'pedidos' %}"> MIS PEDIDOS </a>
+                    <a href="{% url 'add_soli' %}"> SOLICITUD DE SERVICIO </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
-                    <p id="rut_pac" style="display: none">{{ user.username}}</p>         
+                           
                 {% else %}
+                    <a href="{% url 'index' %}"> <i class="fa fa-home" aria-hidden="true"></i> INICIO </a>
                     <a href="{% url 'login' %}"> <i class="fa fa-sign-in" aria-hidden="true"></i> INICIAR SESION </a>
                     <a href="{% url 'signup' %}"> <i class="fa fa-user-circle-o" aria-hidden="true"></i> REGISTRARSE </a>
 
@@ -52,20 +64,11 @@
         {% endblock %}
     </main>
     
-    <footer>
-        <div class="contenedor">
-            <p class="copyright">IServet &copy; 2019</p>
-            <div class="redesociales">
-                <a class="icon-facebook-circled" href="#"></a>
-                <a class="icon-twitter-circled" href="#"></a>
-                <a class="icon-instagram-circled" href="#"></a>
-            </div>
-        </div>
-    </footer>
-
+    <script src="{% static 'js/cuentas_saldo.js' %}"></script>
     <script src="{% static 'js/post.js' %}"></script>
-    <script src="{% static 'js/examenes_med.js' %}"></script>
-    <script src="{% static 'js/examenes_pac.js' %}"></script>
+    <script src="{% static 'js/seguimiento.js' %}"></script>
+    <script src="{% static 'js/productos.js' %}"></script>
+    <script src="{% static 'js/stock.js' %}"></script>
     
 
 </body>

@@ -2,7 +2,8 @@
 #nuestrosexameneslistado h2
 {
     text-align: center;
-    padding: 40px;
+    padding: 20px;
+    color: black;
 }
 
 /* NOMBRE Y PRECIO DE LOS EXAMENES DE LA SECTION NUESTROS EXAMENES*/
@@ -21,31 +22,28 @@
 /* BOTON COMPRAR*/
 .botoncomprar
 {
-    border: 1px solid #59D453;
-    border-radius: 5px;
-    background: #5E9CB1;
-    color: #fff;
-    padding: 10px;
+    border: 1px solid rgb(116, 116, 116);
+    background: rgb(235, 235, 235);
+    color: black;
     text-decoration: none;
-    font-size: 22px;
-    
+    font-size: 18px;
+    padding: 5px;
+    display: block;
+    margin-top: 10px; 
 }
 /* BOTON COMPRAR*/
 .botoncomprar:hover
 {
-    background: #1C89AF;
+    background: rgb(231, 231, 231);
     text-align: center;
-    transition: all 1.9s;
-    color: #fff;
-    padding: 10px;
+    transition: all 0.3s;
     text-decoration: none;
 }
 
 /*SECTION NUESTROS EXAMENES*/
 #nuestrosexameneslistado
 {
-    background: #3364AB;
-    color: #fff;
+    color: black;
     font-family: 'Poppins', sans-serif;
     
 }
@@ -55,24 +53,17 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    color: black;
     
 }
 
 /* ARTICLES QUE ESTAN DENTRO DE SECTION NUESTROS EXAMENES*/
 #nuestrosexameneslistado article
 {
-    background: #2C7EF3;
     margin: 15px;
-    border: 1px solid #fff;
+    margin-top:90px;
+    border: 1px solid rgb(92, 92, 92);
     border-radius: 1px;
     text-align: center;
-    padding-bottom: 50px;
-    box-shadow: 5px 5px 150px -14px black;
-}
-
-/* IMAGENES QUE ESTAN DENTRO DEL SECTION NUESTROS EXAMENES*/
-#nuestrosexameneslistado img
-{
-    width: 100%;
-    max-width: 250px;
+    padding: 10px 10px;
 }

@@ -1,0 +1,15 @@
+#pedidoSelected{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px;
+    width: 98%
+}
+
+.unPedido{
+    margin-top: 50px;
+    width: 350px;
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+}

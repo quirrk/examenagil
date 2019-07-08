@@ -1,0 +1,33 @@
+{% extends 'hospital/base.html'%}
+{% load static %}
+
+{% block extrastatic %}
+{% endblock %}
+
+{% block content %}
+
+<main class="main">
+
+    {% for hist in soli_histo %}
+
+        {% if hist.tecnico_encargado.rut == user.username %}
+            <div class="datos-hist">
+                <p>ID Solicitud: {{hist.id_solicitud}}</p>
+                <p>Tipo: {{hist.tipo_solicitud}}</p>
+                <p>Rut Cliente: {{user.username}}</p>
+                <p>Descripcion: {{hist.desc_soli}}</p>
+                <p>Contacto Cliente: {{hist.correo_contacto}}</p>
+                <p>Direccion Cliente: {{hist.direccion_solicitud_servicio}}</p>
+                <p>Fecha asistencia: {{hist.fecha_serv}}</p>
+                <p>Encargado: {{hist.tecnico_encargado}}</p>
+                <p>Estado:  {{hist.estado}}</p>
+                <a href="http://127.0.0.1:8000/admin/hospital/solicitud/{{hist.id_solicitud}}">Acceder a solicitud</a>
+            </div>
+        {% endif %}
+
+    {% endfor %}
+      
+
+</main>
+
+{% endblock %}

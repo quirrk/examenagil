@@ -1,0 +1,21 @@
+{% extends 'hospital/base.html'%}
+{% load static %}
+
+{% block extrastatic %}
+
+{% endblock %}
+
+{% block content %}
+
+<main class="main">
+    
+    <form method="POST" id="formulario" action="" style="margin-top: 90px;">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" style="margin-top:80px;" onclick="alert('Solicitud enviada correctamente')">Enviar</button>
+        <br/><a href="{% url 'solicitud' %}" >Historial de servicio</a>
+    </form>
+
+    
+</main>
+
+{% endblock %}

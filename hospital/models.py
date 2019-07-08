@@ -1,32 +1,36 @@
 from django.db import models
+from datetime import datetime
 
-# Create your models here.
-class Paciente(models.Model):
+TIPOSOLI = (
+    ('Mantencion', 'Mantencion'),
+    ('Reparacion', 'Reparacion'),
+)
+
+ESTADO_SOLI = (
+    ('En espera','En espera'),
+    ('En Curso','En Curso'),
+    ('Finalizada','Finalizada')
+)
+
+class Tecnico(models.Model):
     rut = models.CharField(max_length=10)
-    nombre = models.CharField(max_length=50)
-    apellidos = models.CharField(max_length=70)
-    edad = models.IntegerField()
+    nombreComp = models.CharField(max_length=100)
+    
 
     def __str__(self):
-        return self.rut
+        return self.nombreComp
 
-class Medico(models.Model):
-    rut = models.CharField(max_length=10)
-    nombre = models.CharField(max_length=50)
-    apellidos = models.CharField(max_length=70)
-    email = models.EmailField()
+class Solicitud(models.Model):
+    id_solicitud = models.AutoField(primary_key=True)
+    tipo_solicitud = models.CharField(max_length=20, choices=TIPOSOLI)
+    rut_cliente = models.CharField(max_length=11)
+    desc_soli = models.CharField(max_length=300,null=False)
+    correo_contacto = models.CharField(max_length=40, null=False,default="")
+    direccion_solicitud_servicio = models.CharField(max_length=80,null=False,default="")
+    fecha_serv = models.DateTimeField(null=True)
+    tecnico_encargado = models.ForeignKey('Tecnico', on_delete=models.CASCADE, null=True)
+    estado =  models.CharField(max_length=20, choices=ESTADO_SOLI, default="En espera")
 
     def __str__(self):
-        return self.apellidos
+        return self.rut_cliente
 
-class Examen(models.Model):
-    cod_examen = models.AutoField(primary_key=True)
-    rut_entidad = models.CharField(max_length=20)
-    rut_paciente = models.CharField(max_length=20)
-    fecha_solicitud = models.DateField(auto_now_add=True, null=True)
-    fecha_entrega = models.DateField(blank=False, null=True)
-    estado = models.CharField(max_length=200)
-    rut_especialista = models.CharField(max_length=20)
-
-    def str(self):
-        return self.cod_examen

@@ -46,6 +46,17 @@ header label
     background: rgba(255,255,255,0.3);
 }
 
+
+#rut_pac:hover{
+    background: rgba(0, 75, 180, 0);
+}
+
+#saldo_cli:hover{
+    background: rgba(0, 75, 180, 0);
+}
+
+
+
 /* CUANDO HAGO CHECKED EN EL CHECKBOX DEL MENU "ICONO MENU BAR"*/
 #menu-bar:checked ~ .menu 
 {
