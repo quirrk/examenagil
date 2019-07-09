@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
         {% if user.is_authenticated and user.is_staff and user.is_superuser %}
-            <title> BODEGA </title>
+            <title> ADMINISTRACION </title>
         {% elif user.is_authenticated and user.is_staff %}
-            <title> GESTION TECNICOS </title>
+            <title> PORTAL MEDICO </title>
         {% elif user.is_authenticated %}
-            <title> VENTAS Y SOLICITUDES </title>                  
+            <title> PORTAL PACIENTE </title>                  
         {% else %}
             <title> BIENVENIDO </title>             
         {% endif %}
@@ -33,7 +33,7 @@
             <nav class="menu">
 
                 {% if user.is_authenticated and user.is_staff and user.is_superuser %}
-                    <a href="{% url 'inventario' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> CONSULTAR STOCK </a>
+                    <a href="http://127.0.1:8000/admin"> <i class="fa fa-user-md" aria-hidden="true"></i> PORTAL ADMIN </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% elif user.is_authenticated and user.is_staff %}
                     <a href="{% url 'inventario' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> CONSULTAR STOCK </a>
@@ -42,11 +42,7 @@
                 {% elif user.is_authenticated %}
                     <a>Usuario:</a>
                     <a id="rut_pac" >{{user.username}}</a>
-                    <a id="" >Saldo bancario:</a>
-                    <a id="saldo_cli" ></a>
-                    <a href="{% url 'comprar' %}"> COMPRAR </a>
-                    <a href="{% url 'pedidos' %}"> MIS PEDIDOS </a>
-                    <a href="{% url 'add_soli' %}"> SOLICITUD DE SERVICIO </a>
+                    <a href="{% url 'add_soli' %}"> SOLICITUDES </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                            
                 {% else %}

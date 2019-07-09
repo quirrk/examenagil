@@ -10,7 +10,7 @@
 
     {% for hist in soli_histo %}
 
-        {% if hist.tecnico_encargado.rut == user.username %}
+        {% if hist.medico_encargado.rut == user.username %}
             <div class="datos-hist">
                 <p>ID Solicitud: {{hist.id_solicitud}}</p>
                 <p>Tipo: {{hist.tipo_solicitud}}</p>
@@ -19,7 +19,7 @@
                 <p>Contacto Cliente: {{hist.correo_contacto}}</p>
                 <p>Direccion Cliente: {{hist.direccion_solicitud_servicio}}</p>
                 <p>Fecha asistencia: {{hist.fecha_serv}}</p>
-                <p>Encargado: {{hist.tecnico_encargado}}</p>
+                <p>Encargado: {{hist.medico_encargado}}</p>
                 <p>Estado:  {{hist.estado}}</p>
                 <a href="https://nicolini.pythonanywhere.com/admin/hospital/solicitud/{{hist.id_solicitud}}">Acceder a solicitud</a>
             </div>
