@@ -7,9 +7,7 @@
 {% block content %}
 
 <main class="main">
-
     {% for hist in soli_hist %}
-
         {% if user.username == hist.rut_cliente %}
             <div class="datos-hist">
                 <p>ID Solicitud: {{hist.id_solicitud}}</p>
@@ -21,10 +19,6 @@
                 <p>Estado:  {{hist.estado}}</p>
             </div>
         {% endif %}
-
     {% endfor %}
-      
-
 </main>
-
 {% endblock %}

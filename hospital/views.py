@@ -32,7 +32,5 @@ def add_soli(request):
     return render(request,'hospital/solicitud_fin.html',{'form':form})
 
 def mis_soli(request):
-    soli_histo = Solicitud.objects.filter(estado__contains="En curso")
+    soli_histo = Solicitud.objects.filter(estado__contains="En espera")
     return render(request, 'hospital/mis_soli.html', {'soli_histo':soli_histo})
-
-
