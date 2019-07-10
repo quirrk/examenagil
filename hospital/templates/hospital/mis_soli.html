@@ -19,10 +19,16 @@
                 <p>Fecha asistencia: {{hist.fecha_serv}}</p>
                 <p>Encargado: {{hist.medico_encargado}}</p>
                 <p>Estado:  {{hist.estado}}</p>
+                <p>Valor:  {{hist.valor}}</p>
+                <input type="text" style="display:none;" id="valor-consulta" value="{{hist.valor}}">
                 <a href="https://nicolini.pythonanywhere.com/admin/hospital/solicitud/{{hist.id_solicitud}}">Acceder a solicitud</a>
             </div>
         {% endif %}
     {% endfor %}
+
+    <div class="datos-hist">
+        <p id="suma"></p>
+    </div>
       
 
 </main>

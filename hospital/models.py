@@ -41,3 +41,10 @@ class Solicitud(models.Model):
 
     def __str__(self):
         return self.rut_cliente
+
+class ValorTotal(models.Model):
+    id_valor = models.AutoField(primary_key=True)
+    solicitud = models.ForeignKey('Solicitud', on_delete=models.CASCADE, null=True)
+    total = models.CharField(max_length=10)
+    def __str__(self):
+        return self.total

@@ -25,6 +25,7 @@ def add_soli(request):
 
 def mis_soli(request):
     soli_histo = Solicitud.objects.filter(estado__contains="En espera")
+    valores = Solicitud.objects.filter(estado__contains="En espera")
     return render(request, 'hospital/mis_soli.html', {'soli_histo':soli_histo})
 
 def suma_mensual(request):
