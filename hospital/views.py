@@ -25,9 +25,19 @@ def add_soli(request):
 
 def mis_soli(request):
     soli_histo = Solicitud.objects.filter(estado__contains="En espera")
-    valores = Solicitud.objects.filter(estado__contains="En espera")
-    return render(request, 'hospital/mis_soli.html', {'soli_histo':soli_histo})
+    horas = Solicitud.objects.filter(estado__contains="En espera")
+    calculo = 0
+    for h in horas:
+        calculo = int(calculo) + int( int(h.valor))
+    return render(request, 'hospital/mis_soli.html', {'soli_histo':soli_histo}, {'calculo':calculo})
 
-def suma_mensual(request):
-    total = Solicitud.objects.filter(estado__contains="En espera").aggregate(Sum('valor'))
-    return render(request, 'hospital/recaudacion.html', {'total':total})
+#def suma_mensual(request):
+#    total = Solicitud.objects.filter(estado__contains="En espera").aggregate(tot=Sum('valor'))
+#    return render(request, 'hospital/recaudacion.html', {'total':total})
+
+def suma_total(request):
+    horas = Solicitud.objects.filter(estado__contains="En espera")
+    calculo = 0
+    for h in horas:
+        calculo = int(calculo) + int( int(h.valor))
+    return render(request, 'hospital/recaudacion.html', {'calculo':calculo})
