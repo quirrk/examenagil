@@ -28,6 +28,16 @@ class Solicitud(models.Model):
     fecha_serv = models.DateTimeField(null=True)
     medico_encargado = models.ForeignKey('Medico', on_delete=models.CASCADE, null=True)
     estado =  models.CharField(max_length=20, choices=ESTADO_SOLI, default="Enviada")
+    def valor(self):
+        if self.tipo_solicitud == 'Kinesiología':
+            return 150000
+        elif self.tipo_solicitud == 'Oftalmología':
+            return 100000
+        elif self.tipo_solicitud == 'Otorrinolaringología':
+            return 200000
+        else:
+            return 0
+    valor = property(valor)
 
     def __str__(self):
         return self.rut_cliente
