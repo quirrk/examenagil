@@ -24,8 +24,11 @@ def add_soli(request):
     return render(request,'hospital/solicitud_fin.html',{'form':form})
 
 def mis_soli(request):
+    username = None
+    if request.user.is_authenticated:
+        username = request.user.username
     soli_histo = Solicitud.objects.filter(estado__contains="En espera")
-    horas = Solicitud.objects.filter(estado__contains="En espera")
+    horas = Solicitud.objects.filter(medico_encargado__rut=username, estado__contains="En espera")
     calculo_doc = 0
     for h in horas:
         calculo_doc = int(calculo_doc) + int( int(h.valor))
