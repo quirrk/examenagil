@@ -21,13 +21,12 @@
                 <p>Estado:  {{hist.estado}}</p>
                 <p>Valor:  {{hist.valor}}</p>
                 <input type="text" style="display:none;" id="valor-consulta" value="{{hist.valor}}">
-                <a href="https://nicolini.pythonanywhere.com/admin/hospital/solicitud/{{hist.id_solicitud}}">Acceder a solicitud</a>
             </div>
         {% endif %}
     {% endfor %}
 
     <div class="datos-hist">
-        <p>Pago mensual: {{ calculo }}</p>
+        <p>Pago mensual: {{ calculo_doc }}</p>
     </div>
       
 

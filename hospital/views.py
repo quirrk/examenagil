@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .forms import SolicitudForm
-from .models import Solicitud
+from .models import Solicitud, Medico
 from django.shortcuts import redirect
 from django.db.models import Sum
 
@@ -26,10 +26,10 @@ def add_soli(request):
 def mis_soli(request):
     soli_histo = Solicitud.objects.filter(estado__contains="En espera")
     horas = Solicitud.objects.filter(estado__contains="En espera")
-    calculo = 0
+    calculo_doc = 0
     for h in horas:
-        calculo = int(calculo) + int( int(h.valor))
-    return render(request, 'hospital/mis_soli.html', {'soli_histo':soli_histo}, {'calculo':calculo})
+        calculo_doc = int(calculo_doc) + int( int(h.valor))
+    return render(request, 'hospital/mis_soli.html', {'soli_histo':soli_histo,'calculo_doc':calculo_doc})
 
 #def suma_mensual(request):
 #    total = Solicitud.objects.filter(estado__contains="En espera").aggregate(tot=Sum('valor'))

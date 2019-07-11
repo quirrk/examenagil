@@ -34,9 +34,9 @@
 
                 {% if user.is_authenticated and user.is_staff and user.is_superuser %}
                     <a href="http://127.0.1:8000/admin"> <i class="fa fa-user-md" aria-hidden="true"></i> PORTAL ADMIN </a>
+                    <a href="{% url 'suma_total' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> RECAUDACION MENSUAL </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% elif user.is_authenticated and user.is_staff %}
-                    <a href="{% url 'suma_total' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> PAGO MENSUAL </a>
                     <a href="{% url 'mis_soli' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> AGENDA </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% elif user.is_authenticated %}
