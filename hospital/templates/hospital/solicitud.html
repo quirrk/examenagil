@@ -7,26 +7,18 @@
 {% block content %}
 
 <main class="main">
-
     {% for hist in soli_hist %}
-
         {% if user.username == hist.rut_cliente %}
             <div class="datos-hist">
                 <p>ID Solicitud: {{hist.id_solicitud}}</p>
                 <p>Tipo: {{hist.tipo_solicitud}}</p>
                 <p>Rut: {{user.username}}</p>
-                <p>Descripcion: {{hist.desc_soli}}</p>
                 <p>Contacto: {{hist.correo_contacto}}</p>
-                <p>Direccion: {{hist.direccion_solicitud_servicio}}</p>
                 <p>Fecha asistencia: {{hist.fecha_serv}}</p>
-                <p>Encargado: {{hist.tecnico_encargado}}</p>
+                <p>Encargado: {{hist.medico_encargado}}</p>
                 <p>Estado:  {{hist.estado}}</p>
             </div>
         {% endif %}
-
     {% endfor %}
-      
-
 </main>
-
 {% endblock %}
