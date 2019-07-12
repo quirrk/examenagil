@@ -11,7 +11,7 @@
     {% for hist in soli_histo %}
 
         {% if hist.medico_encargado.rut == user.username %}
-            <div style="padding: 0 3px;" class="datos-hist">
+        <div style="padding: 0 3px;" class="datos-hist">
                 <table style="width: 100%;">
                     <tr style="width: 25%; text-align: left; vertical-align: top; border: 1px solid #000; border-spacing: 0;">
                         <td>ID: </td>
@@ -38,6 +38,10 @@
             </div>
         {% endif %}
     {% endfor %}
+
+    <div style="position:fixed; bottom: -5px; z-index: 100; width: 100%; background-color: white;" class="datos-hist">
+        <p>Pago mensual: ${{ calculo_doc }}</p>
+    </div>
       
 
 </main>
