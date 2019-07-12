@@ -37,6 +37,7 @@
                     <a href="{% url 'suma_total' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> RECAUDACION MENSUAL </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% elif user.is_authenticated and user.is_staff %}
+                    <a href="{% url 'recaudoc' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> RECAUDACION </a>
                     <a href="{% url 'mis_soli' %}"> <i class="fa fa-user-md" aria-hidden="true"></i> AGENDA </a>
                     <a href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> CERRAR SESION</a>
                 {% elif user.is_authenticated %}
@@ -54,7 +55,7 @@
         </div>
     </header>       
     
-    <main>
+    <main style="margin-bottom: 50px">
         {% block content %}
         {% endblock %}
     </main>

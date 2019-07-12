@@ -28,7 +28,7 @@ def mis_soli(request):
     if request.user.is_authenticated:
         username = request.user.username
     soli_histo = Solicitud.objects.filter(estado__contains="En espera")
-    horas = Solicitud.objects.filter(medico_encargado__rut=username, estado__contains="En espera")
+    horas = Solicitud.objects.filter(medico_encargado__rut=username)
     calculo_doc = 0
     for h in horas:
         calculo_doc = int(calculo_doc) + int( int(h.valor))
@@ -39,8 +39,20 @@ def mis_soli(request):
 #    return render(request, 'hospital/recaudacion.html', {'total':total})
 
 def suma_total(request):
-    horas = Solicitud.objects.filter(estado__contains="En espera")
+    horas = Solicitud.objects.all()
+    contar = Solicitud.objects.all().count()
     calculo = 0
     for h in horas:
         calculo = int(calculo) + int( int(h.valor))
-    return render(request, 'hospital/recaudacion.html', {'calculo':calculo})
+    return render(request, 'hospital/recaudacion.html', {'calculo':calculo,'contar':contar})
+
+def recaudoc(request):
+    username = None
+    if request.user.is_authenticated:
+        username = request.user.username
+    soli_histo = Solicitud.objects.all()
+    horas = Solicitud.objects.filter(medico_encargado__rut=username)
+    calculo_doc = 0
+    for h in horas:
+        calculo_doc = int(calculo_doc) + int( int(h.valor))
+    return render(request, 'hospital/recaudaciondoc.html', {'soli_histo':soli_histo,'calculo_doc':calculo_doc})
